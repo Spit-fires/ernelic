@@ -1,3 +1,4 @@
+const aoijs = require("aoi.js")
  const bot = new aoijs.Bot({
    token: "process.env.TOKEN", //Discord Bot Token
    prefix: "$getServerVar[Variable]", //Discord Bot Prefix
