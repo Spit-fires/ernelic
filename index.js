@@ -7,9 +7,7 @@ const aoijs = require("aoi.js")
 
  bot.onMessage() //Allows to execute Commands
 
- const loader = new aoijs.LoadCommands(bot)
- loader.load(bot.cmd, "./commands/")
-; 
+ 
  /*
  bot.cmd is object of Collections where the command data will be stored
  "./commands/" is the path of folder where all the commands' code will be present
@@ -38,4 +36,6 @@ const aoijs = require("aoi.js")
 );
 
 voice.onTrackStart();
+const loader = new aoijs.LoadCommands(bot)
+loader.load(bot.cmd, "./commands/")
 loader.load(voice.cmd, "./commands/voice/");
