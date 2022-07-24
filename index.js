@@ -9,7 +9,6 @@ const aoijs = require("aoi.js")
 
  const loader = new aoijs.LoadCommands(bot)
  loader.load(bot.cmd, "./commands/")
- loader.load(voice.cmd, "./commands/voice/")
 ; 
  /*
  bot.cmd is object of Collections where the command data will be stored
@@ -28,7 +27,7 @@ const aoijs = require("aoi.js")
       //directory : "music", only for Disk type
     },
     soundcloud: {
-      clientId : "SOUNDCLOUD CLIENT ID",
+      clientId : "process.env.SCCI",
       limitLikeTrack : 200 
     },//optional
   playerOptions: {
@@ -39,3 +38,4 @@ const aoijs = require("aoi.js")
 );
 
 voice.onTrackStart();
+loader.load(voice.cmd, "./commands/voice/");
